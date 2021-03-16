@@ -211,6 +211,7 @@ img[alt="removeIcon"]:hover{
     }
     .options{
         height: 700px !important;
+        display:block !important;
     }
     .options p{
         width:170px;
