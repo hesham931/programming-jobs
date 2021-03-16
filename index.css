@@ -211,7 +211,6 @@ img[alt="removeIcon"]:hover{
     }
     .options{
         height: 700px !important;
-        display:block !important;
     }
     .options p{
         width:170px;
@@ -224,6 +223,7 @@ img[alt="removeIcon"]:hover{
     }
     #option1 , #option2 , #option3 , #option4 , #option5 , #option6 , #option7 , #option8 , #option9 , #option10{
         height:700px !important;
+        display:block !important;
     }
     .topOfList{
         font-size: 30px;
