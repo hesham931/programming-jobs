@@ -197,6 +197,9 @@ img[alt="removeIcon"]:hover{
     background-color: rgba(166, 248, 223, 0.37);
     border-radius: 5px;
 }
+.svg-inline--fa{
+        font-size: 50px;
+}
 @media screen and (max-width:991px){
     *{
         font-size: 25px;
@@ -214,5 +217,8 @@ img[alt="removeIcon"]:hover{
     }
     .arrow{
         top:1500px;
+    }
+    .svg-inline--fa{
+        font-size: 100px;
     }
 }
