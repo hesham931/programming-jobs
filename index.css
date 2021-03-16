@@ -206,4 +206,10 @@ img[alt="removeIcon"]:hover{
         width: 100%;
         font-size:30px;
     }
+    .options{
+        height: 500px;
+    }
+    .options p{
+        width:170px;
+    }
 }
