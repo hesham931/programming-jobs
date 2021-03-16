@@ -222,13 +222,13 @@ img[alt="removeIcon"]:hover{
         font-size: 100px;
     }
     #option1 , #option2 , #option3 , #option4 , #option5 , #option6 , #option7 , #option8 , #option9 , #option10{
-        height:400px !important;
+        height:700px !important;
     }
     .topOfList{
         font-size: 30px;
     }
     img[alt="optionsImage"]{
-        width:400px;
-        height:400px
+        width:300px;
+        height:300px
     }
 }
