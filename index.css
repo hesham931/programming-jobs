@@ -204,5 +204,6 @@ img[alt="removeIcon"]:hover{
     #searchBar {
         height: 150px;
         width: 100%;
+        font-size:35px;
     }
 }
