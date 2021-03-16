@@ -227,4 +227,8 @@ img[alt="removeIcon"]:hover{
     .topOfList{
         font-size: 30px;
     }
+    img[alt="optionsImage"]{
+        width:400px;
+        height:400px
+    }
 }
