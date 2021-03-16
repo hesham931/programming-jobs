@@ -212,4 +212,7 @@ img[alt="removeIcon"]:hover{
     .options p{
         width:170px;
     }
+    .arrow{
+        top:1500px;
+    }
 }
