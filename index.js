@@ -169,4 +169,9 @@ function scrolledAnimation(){
             }
         },2000);
     }
+     if(scrolled === 0){
+        for(var i = 0 ; i < optionsArray.length ; i++){
+            optionsArray[i][0].classList.remove("animation");
+        }
+    }
 }
