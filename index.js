@@ -152,14 +152,21 @@ function scrolledAnimation(){
         arrow.style = "visibility: hidden";
         arrow.classList.remove("arrowOption");
     }
-    if(scrolled < 100)
-        option1.classList.add("animation");
-    if(scrolled > 200)
+
+    option1.classList.add("animation");
+    if(window.innerWidth <= 991){
         option2.classList.add("animation");
-    if(scrolled > 300)
-        option3.classList.add("animation");
-    if(scrolled > 400)
-        option4.classList.add("animation");
-    if(scrolled > 500)
-        option5.classList.add("animation");
+        setInterval(()=>{
+            for(var i = 2 ; i < optionsArray.length ; i++){
+                optionsArray[i][0].classList.add("animation");
+            }
+        },5000);
+    }
+    else{
+        setInterval(()=>{
+            for(var i = 1 ; i < optionsArray.length ; i++){
+                optionsArray[i][0].classList.add("animation");
+            }
+        },2000);
+    }
 }
