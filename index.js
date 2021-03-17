@@ -5,30 +5,33 @@ let inputBar = document.getElementById("searchBar"),
     arrow = document.getElementById("arrow"),
     arrayList = new Array(),
     index = 0;
-const option1 = document.getElementById("option1"),
-      option2 = document.getElementById("option2"),
-      option3 = document.getElementById("option3"),
-      option4 = document.getElementById("option4"),
-      option5 = document.getElementById("option5"),
-      option6 = document.getElementById("option6"),
-      option7 = document.getElementById("option7"),
-      option8 = document.getElementById("option8"),
-      option9 = document.getElementById("option9"),
-      option10 = document.getElementById("option10"),
-      optionArray1 = ["frontEnd","senior","html","css","javaScript"],
-      optionArray2 = ["fullStack","midweight","python","react"],
-      optionArray3 = ["frontEnd","junior","react","sass","javaScript"],
-      optionArray4 = ["frontEnd","junior","css","javaScript"],
-      optionArray5 = ["fullStack","midweight","javaScript","sass","ruby"],
-      optionArray6 = ["backEnd","junior","ruby","roR"],
-      optionArray7 = ["frontEnd","junior","html","sass","javaScript"],
-      optionArray8 = ["frontEnd","junior","vue","javaScript","sass"],
-      optionArray9 = ["fullStack","midweight","javaScript","django","python"],
-      optionArray10 = ["frontEnd","junior","react","sass","javaScript"];
-
+const optionsArray = [
+    [document.getElementById("option1")],
+    [document.getElementById("option2")],
+    [document.getElementById("option3")],
+    [document.getElementById("option4")],
+    [document.getElementById("option5")],
+    [document.getElementById("option6")],
+    [document.getElementById("option7")],
+    [document.getElementById("option8")],
+    [document.getElementById("option9")],
+    [document.getElementById("option10")]
+];
+const contentOfOptionsArray = [
+          ["frontEnd","senior","html","css","javaScript"],
+          ["fullStack","midweight","python","react"],
+          ["frontEnd","junior","react","sass","javaScript"],
+          ["frontEnd","junior","css","javaScript"],
+          ["fullStack","midweight","javaScript","sass","ruby"],
+          ["backEnd","junior","ruby","roR"],
+          ["frontEnd","junior","html","sass","javaScript"],
+          ["frontEnd","junior","vue","javaScript","sass"],
+          ["fullStack","midweight","javaScript","django","python"],
+          ["frontEnd","junior","react","sass","javaScript"],
+        ];
 arrow.addEventListener("click" , getTop , false);
-inputBar.addEventListener("focus" , showOptions , false);
-inputBar.addEventListener("blur" , removeText , false);
+inputBar.addEventListener("mouseover" , showOptions , false);
+inputBar.addEventListener("mouseleave" , removeText , false);
 inputBar.addEventListener("keyup" , putText , false);
 function getTop(){
     window.scrollTo({
@@ -38,14 +41,14 @@ function getTop(){
       });
 };
 function putText(){
-    inputBar.value = "Fetch what you want from the list below please , thank you for using \'Programming Jobs\'.";
+    inputBar.innerHTML = "Fetch what you want from the list below please , thank you for using \'Programming Jobs\'.";
 }
 function removeText(){
-    inputBar.value = "";
+    inputBar.innerHTML = "Choose your donation area to find the best job opportunity.";
 }
 function showOptions(){
     "use strict";
-    inputBar.value = "Fetch what you want from the list below , thank you for using \'Programming Jobs\'.";
+    inputBar.innerHTML = "Fetch what you want from the list below , thank you for using \'Programming Jobs\'.";
     optionDiv.classList.remove("display");
     optionDiv.classList.remove("optionHide");
 }
@@ -93,67 +96,23 @@ function setOption(){
     optionDiv.classList.add("optionHide");
 };
 function enableSearch(element){
-    if(optionArray1.indexOf(element) === -1){
-        option1.style.display="none";
-    }
-    if(optionArray2.indexOf(element) === -1){
-        option2.style.display="none";
-    }
-    if(optionArray3.indexOf(element) === -1){
-        option3.style.display="none";
-    }
-    if(optionArray4.indexOf(element) === -1){
-        option4.style.display="none";
-    }
-    if(optionArray5.indexOf(element) === -1){
-        option5.style.display="none";
-    }
-    if(optionArray6.indexOf(element) === -1){
-        option6.style.display="none";
-    }
-    if(optionArray7.indexOf(element) === -1){
-        option7.style.display="none";
-    }
-    if(optionArray8.indexOf(element) === -1){
-        option8.style.display="none";
-    }
-    if(optionArray9.indexOf(element) === -1){
-        option9.style.display="none";
-    }
-    if(optionArray10.indexOf(element) === -1){
-        option10.style.display="none";
+    for(let i = 0 ; i < 10 ; i++){
+        if(contentOfOptionsArray[i].indexOf(element) === -1)
+            optionsArray[i][0].style.display = "none";
     }
 }
 function disEnableSearch(element){
-    if(optionArray1.indexOf(element) === -1){
-        option1.style.display="flex";
+    if(window.innerWidth <= 991){
+        for(let i = 0 ; i < 10 ; i++){
+            if(contentOfOptionsArray[i].indexOf(element) === -1)
+                optionsArray[i][0].style.display = "block";
+        }
     }
-    if(optionArray2.indexOf(element) === -1){
-        option2.style.display="flex";
-    }
-    if(optionArray3.indexOf(element) === -1){
-        option3.style.display="flex";
-    }
-    if(optionArray4.indexOf(element) === -1){
-        option4.style.display="flex";
-    }
-    if(optionArray5.indexOf(element) === -1){
-        option5.style.display="flex";
-    }
-    if(optionArray6.indexOf(element) === -1){
-        option6.style.display="flex";
-    }
-    if(optionArray7.indexOf(element) === -1){
-        option7.style.display="flex";
-    }
-    if(optionArray8.indexOf(element) === -1){
-        option8.style.display="flex";
-    }
-    if(optionArray9.indexOf(element) === -1){
-        option9.style.display="flex";
-    }
-    if(optionArray10.indexOf(element) === -1){
-        option10.style.display="flex";
+    else{
+        for(let i = 0 ; i < 10 ; i++){
+            if(contentOfOptionsArray[i].indexOf(element) === -1)
+                optionsArray[i][0].style.display = "flex";
+        }
     }
     for(let i = 0 ; i < arrayList.length ; i++){
         enableSearch(arrayList[i]);
